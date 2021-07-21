@@ -1,0 +1,108 @@
+.price {
+  background-image: url("../images/price-bg.jpg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 100px 0;
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -32px;
+  }
+  &__card {
+    flex: 1 0 300px;
+    margin-right: 32px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 5px 20px #eeeeee;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    @media (min-width: 576px) {
+      flex: 0 1 calc(50% - 32px);
+    }
+    @media (min-width: 992px) {
+      flex: 1 0 calc(33.3% - 32px);
+    }
+  }
+  &__cost {
+    background-color: $lighted-color;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: $bold;
+    padding: 36px 0;
+    p {
+      display: inline-block;
+      color: #fff;
+      margin: 0;
+      position: relative;
+      font-size: 50px;
+      line-height: 50px;
+      padding: 0 35px 0 20px;
+      @media (min-width: 992px) {
+        font-size: 67px;
+        line-height: 76px;
+        padding: 0 50px 0 35px;
+      }
+      &:before {
+        content: "$";
+        position: absolute;
+        left: 0;
+        font-size: 24px;
+        @media (min-width: 992px) {
+          font-size: 32px;
+        }
+      }
+      &:after {
+        content: "/month";
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 0;
+        font-size: 14px;
+        line-height: 25px;
+        @media (min-width: 992px) {
+          line-height: 37px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &__button {
+    font-weight: $semi-bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 18px;
+    padding: 15px 50px 15px 50px;
+    border-radius: 25px;
+  }
+}
+.timetable-price {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 30px 40px 10px 40px;
+  @media (min-width: 992px) {
+    padding: 50px 85px 15px 70px;
+  }
+  &__date,
+  &__time {
+    padding-bottom: 21px;
+    margin: 0;
+    margin-bottom: 19px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 99px;
+      height: 1px;
+      background-color: #d7d7d7;
+    }
+  }
+}

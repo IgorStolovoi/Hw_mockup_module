@@ -1,0 +1,60 @@
+.advantages {
+  background-image: url("../images/advantages.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+  @media (min-width: 768px) {
+    padding: 125px 0 75px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(107, 121, 226, 0.6);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 768px) {
+      margin-right: -35px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media (min-width: 576px) {
+      flex: 1 0 calc(50% - 15px);
+      margin: 0 15px 20px 0;
+    }
+    @media (min-width: 768px) {
+      margin: 0 34px 55px 0;
+      flex: 1 0 calc(25% - 35px);
+    }
+  }
+  &__text {
+    color: #fff;
+    text-align: center;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 15px;
+  }
+  &__descr {
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.gallery {
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    margin-bottom: 185px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  &__img {
+    flex: 1 1 50%;
+    @media (min-width: 768px) {
+      flex: 1 1 25%;
+    }
+    position: relative;
+    img {
+      display: block;
+    }
+    &:hover {
+      .img__hover {
+        background-color: rgba($lighted-color, 0.8);
+        span {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}
+.img__hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all $animation-duration;
+  span {
+    color: $lighted-color;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all $animation-duration;
+  }
+}

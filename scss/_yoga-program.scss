@@ -1,0 +1,103 @@
+.yoga-program {
+  padding: 20px 0;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    padding: 120px 0 80px;
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    text-align: center;
+    color: $section-title;
+    font-weight: $bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 0;
+  }
+  &__subtitle {
+    font-family: $freestyle;
+    font-size: 41px;
+    line-height: 62px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    color: $programm-subtitles;
+    @media (min-width: 768px) {
+      margin-bottom: 63px;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: 768px) {
+      justify-content: center;
+      align-items: stretch;
+      margin-right: -25px;
+    }
+  }
+  &__item {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 10px 5px 20px #eeeeee;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex: 1 0 calc(50% - 30px);
+      margin: 0 30px 25px 0px;
+    }
+  }
+  &__img {
+    flex: 1 0 48%;
+    img {
+      display: block;
+      height: 100%;
+      border-top-right-radius: 10px;
+      @media (min-width: 768px) {
+        object-fit: cover;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+  }
+  &__text {
+    flex: 1 0 54%;
+    padding: 15px;
+    @media (min-width: 768px) {
+      padding: 10px;
+    }
+    @media (min-width: 992px) {
+      padding: 28px 10px 48px 28px;
+    }
+  }
+  &__item-title {
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: $bold;
+    color: $programm-subtitles;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    @media (min-width: 992px) {
+      margin-bottom: 18px;
+    }
+  }
+  &__item-text {
+    margin: 0;
+    line-height: 22px;
+    margin-bottom: 10px;
+    padding-right: 29px;
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+    }
+    @media (min-width: 992px) {
+      margin-bottom: 25px;
+    }
+  }
+  &__item-type {
+    color: $programm-type;
+    margin: 0;
+  }
+}
